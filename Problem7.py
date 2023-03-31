@@ -8,7 +8,7 @@ def NFD(unow,uold,h,dt):
     pnew = 2*unow[1:-1,1:-1] - uold[1:-1,1:-1] + (dt**2)*(h**-2)*(dx+dy)
     return pnew
 
-N = 100; # Points of discretization
+N = 50; # Points of discretization
 tmax = 10; # endtime
 
 x = np.linspace(-0.5,0.5, N)
@@ -40,7 +40,6 @@ for i in range(len(t)-1):
 # fig = plt.figure();
 # ax = fig.add_subplot(projection='3d')
 # ax.plot_surface(x,y,initial)
-
 
 # Plotting
 fig = plt.figure();
